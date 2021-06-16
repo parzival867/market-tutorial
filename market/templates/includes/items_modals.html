@@ -34,10 +34,10 @@
 				<form method="post">
 					{{ purchase_form.hidden_tag() }}
 					<p class="text-center">
-						Are you sure you want to but {{ item.name }} for $ {{ item.price }}?
+						Are you sure you want to buy {{ item.name }} for $ {{ item.price }}?
 					</p>
 					<p class="small text-center">
-						By clicking purchase, you will purchase this item.
+						By clicking Purchase, you will purchase this item.
 					</p>
 					<input id="purchased_item" name="purchased_item" type="hidden" value="{{ item.name }}">
 					<div class="d-grid">

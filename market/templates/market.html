@@ -44,6 +44,7 @@
 		<p>Click on sell item to put an item back on the Market</p>
 		<div class="row">
 			{% for owned_item in owned_items %}
+			{% include 'includes/owned_items_modals.html' %}
 			<div class="col-md-6">
 				<!-- Card -->
 				<div class="card bg-dark text-center p-3">
