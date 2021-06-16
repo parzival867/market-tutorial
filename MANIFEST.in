@@ -1,0 +1,3 @@
+graft market/static
+graft market/templates
+global-exclude *.pyc
