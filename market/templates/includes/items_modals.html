@@ -31,7 +31,19 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				Are you sure you want to buy {{ item.name }} for ${{ item.price }}?
+				<form method="post">
+					{{ purchase_form.hidden_tag() }}
+					<p class="text-center">
+						Are you sure you want to but {{ item.name }} for $ {{ item.price }}?
+					</p>
+					<p class="small text-center">
+						By clicking purchase, you will purchase this item.
+					</p>
+					<input id="purchased_item" name="purchased_item" type="hidden" value="{{ item.name }}">
+					<div class="d-grid">
+						{{ purchase_form.submit(class="btn btn-outline-success") }}
+					</div>
+				</form>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
