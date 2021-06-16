@@ -34,6 +34,9 @@ class User(db.Model, UserMixin):
 		# returns a boolean so can just return the whole function
 		return bcrypt.check_password_hash(self.password_hash, attempted_password)
 
+	def can_purchase(self, item_obj):
+		# return boolean value if the users budget is enough for item
+		return self.budget >= item_obj.price
 
 class Item(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
