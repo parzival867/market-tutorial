@@ -21,6 +21,11 @@
 		{{ form.password2.label(class="form-label") }}
 		{{ form.password2(class="form-control mb-3", placeholder="Confirm Password")}}
 
+		<div class="checkbox mb-3">
+			<p>Already have an account?</p>
+			<a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Log in</a>
+		</div>
+
 		<div class="d-grid my-5">
 			{{ form.submit(class="btn btn-primary btn-lg btn-block") }}
 		</div>
